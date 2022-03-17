@@ -1,0 +1,6 @@
+index::Úvod
+onas::O nás
+ponukame::Ponúkame
+galeria::Galéria
+cennik::Cenník
+kontakt::Kontakt
