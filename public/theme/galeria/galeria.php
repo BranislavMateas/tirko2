@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="gal-content">
-                    <div class="gal-img">
+                    <div class="gal-img ">
                         <img src="<?php echo $foto ?>" alt="<?php echo $nadpis ?>" loading="lazy">
                     </div>
                     <div class="gal-text">
@@ -61,13 +61,20 @@
                     </a>
 
                     <div class="collapse" id="collapseExample">
-                        <div class="collapse-gallery-content">
-                            <?php
-                                $fotky = glob('../galeria/' . $adresar . '/thumbnails/*');
-                                foreach ($fotky as $fotka) { 
-                                    echo '<img src="' . $fotka . '" loading="lazy">';
-                                }
-                            ?>
+                        <div class="collapse-gallery-content container">
+                            <div class="row row-cols-auto d-flex justify-content-center">
+
+                                <?php
+                                    $fotky = glob('../galeria/' . $adresar . '/thumbnails/*');
+                                    foreach ($fotky as $fotka) { 
+                                ?>
+
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                    <?php
+                                            echo '<img src="' . $fotka . '" loading="lazy">'; ?>
+                                    </div>
+                                <?php } ?>
+                            </div>
                         </div>
                     </div>
                 </div>
